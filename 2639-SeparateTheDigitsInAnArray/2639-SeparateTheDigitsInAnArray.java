@@ -1,0 +1,18 @@
+// Last updated: 1/19/2026, 10:45:13 PM
+class Solution {
+    public int[] separateDigits(int[] nums) {
+        ArrayList<Integer> list = new ArrayList<>();
+
+        for (int x : nums) {
+            String s = String.valueOf(x);
+            for (int i = 0; i < s.length(); i++) {
+                list.add(s.charAt(i) - '0');
+            }
+        }
+
+        int[] ans = new int[list.size()];
+        for (int i = 0; i < list.size(); i++) ans[i] = list.get(i);
+
+        return ans;
+    }
+}
